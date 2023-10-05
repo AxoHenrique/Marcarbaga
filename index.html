@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="icon.png">
+    <title>Marcação de Bagaço</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo.png" alt="logo" id="logo-image">
+    </div>
+    <div class="container">
+        <h1>Marcação de Bagaço</h1>
+        <div class="form-container">
+            <form id="arrival-form">
+
+                <label for="date">Data:</label>
+                <input type="date" id="date">
+                
+                <label for="driverName">Nome do Motorista:</label>
+                <input type="text" id="driverName" required>
+
+                <label for="horsePlate">Placa do Cavalo</label>
+                <input type="text" id="horsePlate" required>
+
+                <label for="cartPlate">Placa da Carreta</label>
+                <input type="text" id="cartPlate">
+
+                <label for="companyDestiny">Empresa de Destino:</label>
+                <select id="companyDestiny" required>
+                    <option value="Cargil">Cargil</option>
+                    <option value="Cereal">Cereal</option>
+                    <option value="Ecoblending">Ecoblending</option>
+                    <option value="JBJ">JBJ</option>
+                    <option value="Agro Ávila">Agro Ávila</option>
+                    <option value="Pedro Merola">Pedro Merola</option>
+                    <option value="P.A Orlandia">P.A Orlandia</option>
+                    <option value="Outros">Outros</option>
+                </select>
+                <input type="text" placeholder="Digite aqui..." id="otherCompanyDestinyInput" style="display:none;">
+
+                <label for="carrier">Transportadora:</label>
+                <select id="carrier" required>
+                    <option value="Transcoelho">Transcoelho</option>
+                    <option value="LM Transportes">LM Transportes</option>
+                    <option value="Ecoblending">Ecoblending</option>
+                    <option value="Flávio Alves">Flavio Álves</option>
+                    <option value="Cereal">Cereal</option>
+                    <option value="Alfa Transportes">Alfa Transportes</option>
+                    <option value="Particular">Particular</option>
+                    <option value="Outros">Outras</option>
+                </select>
+                <input type="text" placeholder="Digite aqui..." id="otherCarrierInput" style="display:none">
+
+                <label for="shift">Turno:</label>
+                <select id="shift" required>
+                    <option value="1">1° Horário</option>
+                    <option value="2">2° Horário</option>
+                    <option value="3">3° Horário</option>
+                </select>
+
+                <label for="employee">Funcionário:</label>
+                <select id="employee" required>
+                    <option value="Adriana">Adriana</option>
+                    <option value="Nilton">Nilton</option>
+                    <option value="Genesy">Genesy</option>
+                    <option value="Raony">Raony</option>
+                    <option value="Eduardo">Eduardo</option>
+                    <option value="Luciano">Luciano</option>
+                    <option value="Luiz Henrique">Luiz Henrique</option>
+                    <option value="Outros">Outros</option>
+                </select>
+                <input type="text" placeholder="Digite aqui..." id="otherEmployeeInput" style="display:none;">
+
+                <button type="button" onclick="addToArrivalList()">Gerar Ficha</button>
+                <button type="button" id="printButton">Imprimir Ficha</button>
+            </form>
+        </div>
+        <div id="arrival-list">
+            <h2>Ficha de Marcação de Bagaço</h2>
+            <ul id="list">
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
